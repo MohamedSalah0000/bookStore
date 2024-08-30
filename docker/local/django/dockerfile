@@ -1,4 +1,4 @@
-from python:3.11.6-slim-bullseye
+FROM python:3.11.6-slim-bullseye
 
 # Install apt packages
 RUN apt-get update && apt-get install --no-install-recommends -y \
