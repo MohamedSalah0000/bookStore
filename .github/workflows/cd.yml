@@ -1,0 +1,19 @@
+name: CD | Production
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore: ["docs/**"]
+
+jobs:
+  deployment:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          clean: false
+
+      - name: run server
+        run: docker-compose -f compose.yml up -d --build

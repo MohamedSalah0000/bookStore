@@ -14,4 +14,5 @@ urlpatterns = [
         name="api-docs",
     ),
     path("api/", include("apps.authorization.urls")),
+    path("api/", include("apps.bookstore.urls")),
 ]

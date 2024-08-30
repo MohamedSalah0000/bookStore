@@ -1,5 +1,3 @@
-version: '3'
-
 volumes:
   test_local_postgres_data: {}
 
